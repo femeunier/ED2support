@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE config SYSTEM "ed.dtd">
+<config>
+ 
+ <pft>
+  <num>3</num>
+  <is_tropical>1</is_tropical>
+  <Vm0>12</Vm0>
+  <wood_Kmax>0.06</wood_Kmax>
+ </pft>
+ <pft>
+  <num>4</num>
+  <is_tropical>1</is_tropical>
+ </pft>
+</config>

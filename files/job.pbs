@@ -1,0 +1,15 @@
+#!/bin/bash -l
+#PBS -l nodes=1:ppn=18
+#PBS -l mem=16gb
+#PBS -l walltime=12:00:00
+#PBS -o Yoko.o$PBS_JOBID
+#PBS -e Yoko.e$PBS_JOBID
+
+ml purge ; ml intel-compilers/2021.4.0 HDF5/1.12.1-iimpi-2021b UDUNITS/2.2.28-GCCcore-11.2.0; ulimit -s unlimited
+#ml HDF5/1.10.1-foss-2018a
+
+cd /user/scratchkyukon/gent/gvo000/gvo00074/felicien/ED2.2model/ED2/ED/run
+
+#../build/ed_2.2-dbg-master-ddc9f86 -f ED2IN_history
+/user/scratchkyukon/gent/gvo000/gvo00074/felicien/ED2.2model/ED2/ED/build/ed_2.2-opt-master-8d4c3aff -f ED2IN
+
